@@ -40,15 +40,33 @@ mainWindow.show();
   }
 
   public HBox addHbox(){
+   final  int prefHeight = 20;
+   final int prefWidth = 90;
+
+
    HBox topButtons = new HBox();
-   topButtons.setPadding(new Insets(15,15,15,15));
+   topButtons.setPadding(new Insets(1,15,2,15));
    topButtons.setSpacing(10);
    topButtons.setStyle("-fx-background-color: #333333;");
 
    Button buttonToDo = new Button("ToDo");
-   buttonToDo.setPrefSize(100, 20);
+   buttonToDo.setPrefSize(prefWidth, prefHeight);
 
-   topButtons.getChildren().addAll(buttonToDo);
+   Button buttonEisenhover = new Button("Macierz");
+   buttonEisenhover.setPrefSize(prefWidth, prefHeight);
+
+   Button buttonStatistics = new Button("Statystyki");
+   buttonStatistics.setPrefSize(prefWidth, prefHeight);
+
+   Button buttonNotes = new Button("Notatki");
+   buttonNotes.setPrefSize(prefWidth, prefHeight);
+
+   Button buttonSettings = new Button("Ustawienia");
+   buttonSettings.setPrefSize(prefWidth, prefHeight);
+
+
+
+   topButtons.getChildren().addAll(buttonToDo, buttonEisenhover, buttonStatistics, buttonNotes, buttonSettings);
    return topButtons;
 
   }
